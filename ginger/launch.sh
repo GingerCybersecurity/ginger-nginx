@@ -8,6 +8,7 @@ OVMF_VARS=UEFI_VARS.fd
 
 qemu-system-x86_64 \
   -m 256 \
+  -cpu max \
   -nographic \
   -netdev tap,id=ginger,ifname=tap2,script=no,downscript=no \
   -device virtio-net-pci,netdev=ginger,mac=50:54:00:00:00:66 \
